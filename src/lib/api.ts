@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000/api";
+export const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://lakshitajain.pythonanywhere.com/api";
 
 async function getAuthHeaders() {
   const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -18,7 +18,7 @@ export async function createSite(domain: string) {
   const res = await axios.post(
     `${API_BASE}/create_site/`,
     { domain },
-    { withCredentials: true, headers: { "Content-Type": "application/json", ...headers } }
+    {  headers: { "Content-Type": "application/json", ...headers } }
   );
   return res.data;
 }

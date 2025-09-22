@@ -154,7 +154,12 @@ export default function DashboardPage({ params }: DashboardPageProps) {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
         <div>
           <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">Date range</label>
-          <select value={preset} onChange={(e) => setPreset(e.target.value)} className="w-full rounded-md border border-gray-300 bg-white/80 p-2 text-sm dark:border-white/10 dark:bg-white/5">
+         <select
+  value={preset}
+  onChange={(e) => setPreset(e.target.value)}
+  className="w-full rounded-md border border-gray-300 bg-white/80 p-2 text-sm 
+             dark:border-white/10 dark:bg-gray-800 dark:text-white"
+>
             <option value="last_7d">Last 7 days</option>
             <option value="last_14d">Last 14 days</option>
             <option value="last_30d">Last 30 days</option>
@@ -164,7 +169,13 @@ export default function DashboardPage({ params }: DashboardPageProps) {
         </div>
         <div>
           <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">Services (utm_source)</label>
-          <input value={services} onChange={(e) => setServices(e.target.value)} placeholder="e.g. google,twitter" className="w-full rounded-md border border-gray-300 bg-white/80 p-2 text-sm dark:border-white/10 dark:bg-white/5" />
+          <input
+  value={services}
+  onChange={(e) => setServices(e.target.value)}
+  placeholder="e.g. google,twitter"
+  className="w-full rounded-md border border-gray-300 bg-white/80 p-2 text-sm 
+             dark:border-white/10 dark:bg-gray-800 dark:text-white"
+/>
         </div>
         <div>
           <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">Posts (URL prefixes)</label>

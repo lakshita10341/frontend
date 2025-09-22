@@ -57,7 +57,7 @@ export default function SitesPage() {
   }
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       {/* subtle decorative background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-emerald-50 dark:from-[#0b0b11] dark:via-[#0f1020] dark:to-[#0a1110]" />
